@@ -18,3 +18,6 @@ class Streaming(Publishable):
     class Meta:
         verbose_name = _(u'Streaming')
         verbose_name_plural = _(u'Streaming')
+
+    def get_absolute_url(self):
+        return "/streaming/{}.asx".format(self.pk)
