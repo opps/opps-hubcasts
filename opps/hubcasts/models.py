@@ -8,7 +8,7 @@ from opps.core.models import Publishable
 
 class Streaming(Publishable):
     type = models.CharField(_(u'Type'), max_length=1, choices=(
-        ('s', _(u'Shoutcast')), ('i', _(u'Icecast'))))
+        ('s', _(u'Shoutcast')), ('i', _(u'Icecast')), ('o', _(u'Other'))))
     protocol = models.CharField(_(u'Protocol'), max_length=5, choices=(
         ('http', _(u'HTTP')), ('https', _(u'HTTPS')), ('rmtp', _(u'RMTP'))))
     host = models.CharField(_(u'Hostname'), max_length=50)
