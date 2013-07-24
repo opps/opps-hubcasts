@@ -28,4 +28,6 @@ class Streaming(Publishable):
         host = "{}://{}".format(self.protocol, self.host)
         if self.port:
             host = "{}:{}".format(host, self.port)
+        if self.sufix:
+            host = "{}{}".format(host, self.sufix)
         return host
