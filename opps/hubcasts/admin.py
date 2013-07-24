@@ -15,7 +15,7 @@ class StreamingAdmin(admin.ModelAdmin):
 
     fieldsets = (
         (_(u'Identification'), {
-            'fields': ('site', 'type', 'protocol', 'host', 'port')}),
+            'fields': ('site', 'type', 'protocol', 'host', 'port', 'sufix')}),
         (_(u'Publication'), {
             'classes': ('extrapretty'),
             'fields': ('published', 'date_available')}),
