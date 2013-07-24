@@ -22,6 +22,8 @@ class Streaming(Publishable):
         verbose_name_plural = _(u'Streaming')
 
     def get_absolute_url(self):
+        if self.type == 'o':
+            return self.get_absolute_http()
         return "/streaming/{}.asx".format(self.pk)
 
     def get_absolute_http(self):
