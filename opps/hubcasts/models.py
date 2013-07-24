@@ -21,3 +21,9 @@ class Streaming(Publishable):
 
     def get_absolute_url(self):
         return "/streaming/{}.asx".format(self.pk)
+
+    def get_absolute_http(self):
+        host = "{}://{}".format(self.protocol, self.host)
+        if self.port:
+            host = "{}:{}".format(host, self.port)
+        return host
