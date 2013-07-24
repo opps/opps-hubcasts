@@ -16,7 +16,9 @@ class StreamingPlay(DetailView):
         context['host'] = self.object.host
         context['port'] = self.object.port
         context['protocol'] = self.object.protocol
+        context['sufix'] = self.object.sufix
         context['site'] = self.object.site
+        context['get_absolute_http'] = self.object.get_absolute_http
 
         response_kwargs['content_type'] = mimetypes.guess_type(
             'hubcasts/file.{}'.format(self.ext))[0]
