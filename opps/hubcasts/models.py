@@ -10,7 +10,7 @@ class Streaming(Publishable):
     type = models.CharField(_(u'Type'), max_length=1, choices=(
         ('s', _(u'Shoutcast')), ('i', _(u'Icecast')), ('o', _(u'Other'))))
     protocol = models.CharField(_(u'Protocol'), max_length=5, choices=(
-        ('http', _(u'HTTP')), ('https', _(u'HTTPS')), ('rmtp', _(u'RMTP'))))
+        ('http', _(u'HTTP')), ('https', _(u'HTTPS')), ('rtmp', _(u'RTMP'))))
     host = models.CharField(_(u'Hostname'), max_length=50)
     port = models.PositiveIntegerField(verbose_name=_(u'Port TCP'),
                                        max_length=8, null=True, blank=True)
