@@ -1,7 +1,7 @@
 [main]
 host = https://www.transifex.com
 
-[opps.hubcasts]
+[opps-hubcasts.hubcasts]
 file_filter = opps/hubcasts/locale/<lang>/LC_MESSAGES/django.po
 source_file = opps/hubcasts/locale/en/LC_MESSAGES/django.po
 source_lang = en
