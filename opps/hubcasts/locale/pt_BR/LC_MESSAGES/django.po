@@ -1,21 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Ellison Leão, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: opps-hubcasts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-08 22:58-0300\n"
+"POT-Creation-Date: 2013-09-05 16:15-0300\n"
 "PO-Revision-Date: 2013-08-09 02:03+0000\n"
 "Last-Translator: Ellison Leão\n"
 "Language-Team: Portuguese (Brazil) <opps-developers@googlegroups.com>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: admin.py:17
@@ -70,6 +70,10 @@ msgstr "Porta TCP"
 msgid "Streaming sufix"
 msgstr "Sufixo da transmissão"
 
-#: models.py:21 models.py:22
+#: models.py:21
 msgid "Streaming"
 msgstr "Transmissão"
+
+#: models.py:22
+msgid "Streamings"
+msgstr "Transmissões"

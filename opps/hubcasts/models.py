@@ -19,7 +19,7 @@ class Streaming(Publishable):
 
     class Meta:
         verbose_name = _(u'Streaming')
-        verbose_name_plural = _(u'Streaming')
+        verbose_name_plural = _(u'Streamings')
 
     def get_absolute_url(self):
         if self.type == 'o':
