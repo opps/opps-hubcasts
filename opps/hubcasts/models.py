@@ -21,6 +21,9 @@ class Streaming(Publishable):
         verbose_name = _(u'Streaming')
         verbose_name_plural = _(u'Streamings')
 
+    def __unicode__(self):
+    	return self.get_absolute_url()
+
     def get_absolute_url(self):
         if self.type == 'o':
             return self.get_absolute_http()
