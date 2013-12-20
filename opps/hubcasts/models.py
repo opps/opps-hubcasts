@@ -18,8 +18,8 @@ class Streaming(Publishable):
     host = models.CharField(_(u'Hostname'), max_length=50)
     port = models.PositiveIntegerField(verbose_name=_(u'Port TCP'),
                                        max_length=8, null=True, blank=True)
-    sufix = models.PositiveIntegerField(verbose_name=_(u'Streaming sufix'),
-                                        max_length=25, null=True, blank=True)
+    sufix = models.CharField(verbose_name=_(u'Streaming sufix'),
+                             max_length=155, null=True, blank=True)
 
     class Meta:
         verbose_name = _(u'Streaming')
