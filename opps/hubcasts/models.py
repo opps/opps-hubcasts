@@ -21,6 +21,13 @@ class Streaming(Publishable):
     sufix = models.CharField(verbose_name=_(u'Streaming sufix'),
                              max_length=155, null=True, blank=True)
 
+    content = models.CharField(_('Content'),
+                               max_length=100,
+                               default='audio',
+                               choices=(
+                                   ('audio', _('Audio')),
+                                   ('video', _('Video')),
+                               ))
     class Meta:
         verbose_name = _(u'Streaming')
         verbose_name_plural = _(u'Streamings')
