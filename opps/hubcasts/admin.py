@@ -8,11 +8,11 @@ from django.contrib.auth import get_user_model
 from django.utils.translation import ugettext_lazy as _
 
 from opps.contrib.multisite.admin import AdminViewPermission
-
+from opps.core.admin import PublishableAdmin
 from .models import Streaming
 
 
-class StreamingAdmin(AdminViewPermission):
+class StreamingAdmin(PublishableAdmin, AdminViewPermission):
     list_display = ['title', 'host', 'url', 'port', 'sufix', 'site', 'published']
 
     fieldsets = (
