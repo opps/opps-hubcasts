@@ -13,8 +13,9 @@ from .models import Streaming
 
 
 class StreamingAdmin(PublishableAdmin, AdminViewPermission):
-    list_display = ['title', 'host', 'url', 'port', 'sufix', 'site', 'published']
-
+    list_display = ['title', 'host', 'url', 'port', 'sufix', 'site',
+                    'type', 'content', 'published']
+    list_filter = ['content', 'site', 'type', 'published']
     fieldsets = (
         (_(u'Identification'), {
             'fields': ('site', 'name', 'type', 'protocol', 'host',
