@@ -9,6 +9,7 @@ from opps.core.models import Publishable
 class Streaming(Publishable):
     TYPES = (
         ('o', _(u'Other')),
+        ('u', _(u'Direct URL')),
         ('s', _(u'Shoutcast')),
         ('i', _(u'Icecast')),
     )
@@ -47,12 +48,12 @@ class Streaming(Publishable):
         return self.get_absolute_url()
 
     def get_absolute_url(self):
-        if self.type == 'o':
+        if self.type in ['o', 'u']:
             return self.get_absolute_http()
         return "/streaming/{}.asx".format(self.pk)
 
     def get_absolute_http(self):
-        if not all([self.protocol, self.port, self.sufix]):
+        if self.type == 'u':
             return self.host
         host = "{}://{}".format(self.protocol, self.host)
         if self.port:
