@@ -16,6 +16,7 @@ class StreamingAdmin(PublishableAdmin, AdminViewPermission):
     list_display = ['title', 'host', 'url', 'port', 'sufix', 'site',
                     'type', 'content', 'published']
     list_filter = ['content', 'site', 'type', 'published']
+    search_fields = ['name', 'host', 'content', 'site__domain']
     fieldsets = (
         (_(u'Identification'), {
             'fields': ('site', 'name', 'type', 'protocol', 'host',
