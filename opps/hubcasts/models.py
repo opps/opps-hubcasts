@@ -19,27 +19,96 @@ class Streaming(Publishable):
         ('rtmp', _(u'RTMP')),
         ('mms', _(u'MMS')),
     )
-    name = models.CharField(max_length=255, null=True, blank=True)
-    type = models.CharField(_(u'Type'), max_length=1, choices=TYPES,
-                            default='o')
-    protocol = models.CharField(_(u'Protocol'),
-                                max_length=5,
-                                choices=PROTOCOLS,
-                                null=True, blank=True)
-    host = models.CharField(_(u'Hostname'), max_length=255,
-                            help_text=_(u'Hostname or full url'))
-    port = models.PositiveIntegerField(verbose_name=_(u'Port TCP'),
-                                       max_length=8, null=True, blank=True)
-    sufix = models.CharField(verbose_name=_(u'Streaming sufix'),
-                             max_length=155, null=True, blank=True)
+    name = models.CharField(
+        max_length=255,
+        null=True,
+        blank=True
+    )
 
-    content = models.CharField(_('Content'),
-                               max_length=100,
-                               default='audio',
-                               choices=(
-                                   ('audio', _('Audio')),
-                                   ('video', _('Video')),
-                               ))
+    type = models.CharField(
+        _(u'Type'),
+        max_length=1,
+        choices=TYPES,
+        default='o'
+    )
+
+    protocol = models.CharField(
+        _(u'Protocol'),
+        max_length=5,
+        choices=PROTOCOLS,
+        null=True,
+        blank=True
+    )
+
+    host = models.CharField(
+        _(u'Hostname'),
+        max_length=255,
+        help_text=_(u'Hostname or full url')
+    )
+
+    port = models.PositiveIntegerField(
+        verbose_name=_(u'Port TCP'),
+        max_length=8,
+        null=True,
+        blank=True
+    )
+
+    sufix = models.CharField(
+        verbose_name=_(u'Streaming sufix'),
+        max_length=155,
+        null=True,
+        blank=True
+    )
+
+    mobile_type = models.CharField(
+        _(u'Type'),
+        max_length=1,
+        choices=TYPES,
+        default='o',
+        null=True,
+        blank=True
+    )
+
+    mobile_protocol = models.CharField(
+        _(u'Protocol'),
+        max_length=5,
+        choices=PROTOCOLS,
+        null=True,
+        blank=True
+    )
+
+    mobile_host = models.CharField(
+        _(u'Hostname'),
+        max_length=255,
+        help_text=_(u'Hostname or full url'),
+        null=True,
+        blank=True
+    )
+
+    mobile_port = models.PositiveIntegerField(
+        verbose_name=_(u'Port TCP'),
+        max_length=8,
+        null=True,
+        blank=True
+    )
+
+    mobile_sufix = models.CharField(
+        verbose_name=_(u'Streaming sufix'),
+        max_length=155,
+        null=True,
+        blank=True
+    )
+
+    content = models.CharField(
+        _('Content'),
+        max_length=100,
+        default='audio',
+        choices=(
+            ('audio', _('Audio')),
+            ('video', _('Video')),
+        )
+    )
+
     class Meta:
         verbose_name = _(u'Streaming')
         verbose_name_plural = _(u'Streamings')
