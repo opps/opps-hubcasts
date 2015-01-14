@@ -15,12 +15,18 @@ from .models import Streaming
 class StreamingAdmin(PublishableAdmin, AdminViewPermission):
     list_display = ['title', 'host', 'url', 'port', 'sufix', 'site',
                     'type', 'content', 'published']
+
     list_filter = ['content', 'site', 'type', 'published']
     search_fields = ['name', 'host', 'content', 'site__domain']
     fieldsets = (
         (_(u'Identification'), {
-            'fields': ('site', 'name', 'type', 'protocol', 'host',
-                       'port', 'sufix', 'content')}),
+            'fields': ('site', 'name', 'content')}),
+        (_(u'Desktop'), {
+            'fields': ('type', 'protocol', 'host',
+                       'port', 'sufix')}),
+        (_(u'Mobile'), {
+            'fields': ('mobile_type', 'mobile_protocol', 'mobile_host',
+                       'mobile_port', 'mobile_sufix',)}),
         (_(u'Publication'), {
             'classes': ('extrapretty'),
             'fields': ('published', 'date_available')}),
