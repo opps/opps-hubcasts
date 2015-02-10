@@ -130,3 +130,13 @@ class Streaming(Publishable):
         if self.sufix:
             host = "{}{}".format(host, self.sufix)
         return host
+
+    def get_mobile_absolute_http(self):
+        if self.mobile_type == 'u':
+            return self.mobile_host
+        mobile_host = "{}://{}".format(self.mobile_protocol, self.mobile_host)
+        if self.mobile_port:
+            mobile_host = "{}:{}".format(mobile_host, self.mobile_port)
+        if self.mobile_sufix:
+            mobile_host = "{}{}".format(mobile_host, self.mobile_sufix)
+        return mobile_host
