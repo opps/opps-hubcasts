@@ -8,72 +8,109 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opps-hubcasts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-05 16:15-0300\n"
-"PO-Revision-Date: 2013-08-09 02:03+0000\n"
-"Last-Translator: Ellison Leão\n"
+"POT-Creation-Date: 2015-03-19 21:40-0300\n"
+"PO-Revision-Date: 2015-03-19 21:44-0300\n"
+"Last-Translator: Jean O. Rodrigues <github@jean.bz>\n"
 "Language-Team: Portuguese (Brazil) <opps-developers@googlegroups.com>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.5.4\n"
 
-#: admin.py:17
+#: admin.py:22
 msgid "Identification"
 msgstr "Identificação"
 
-#: admin.py:19
+#: admin.py:24
+msgid "Desktop"
+msgstr "Desktop"
+
+#: admin.py:27
+msgid "Mobile"
+msgstr "Dispositivos móveis"
+
+#: admin.py:30
 msgid "Publication"
 msgstr "Publicação"
-
-#: models.py:10
-msgid "Type"
-msgstr "Tipo"
-
-#: models.py:11
-msgid "Shoutcast"
-msgstr "Shoutcast"
-
-#: models.py:11
-msgid "Icecast"
-msgstr "Icecast"
 
 #: models.py:11
 msgid "Other"
 msgstr "Outro"
 
 #: models.py:12
-msgid "Protocol"
-msgstr "Protocolo"
+msgid "Direct URL"
+msgstr "URL Direta"
 
 #: models.py:13
+msgid "Shoutcast"
+msgstr "Shoutcast"
+
+#: models.py:14
+msgid "Icecast"
+msgstr "Icecast"
+
+#: models.py:17
 msgid "HTTP"
 msgstr "HTTP"
 
-#: models.py:13
+#: models.py:18
 msgid "HTTPS"
 msgstr "HTTPS"
 
-#: models.py:13
+#: models.py:19
 msgid "RTMP"
 msgstr "RTMP"
 
-#: models.py:14
+#: models.py:20
+msgid "MMS"
+msgstr ""
+
+#: models.py:29 models.py:71
+msgid "Type"
+msgstr "Tipo"
+
+#: models.py:36 models.py:80
+msgid "Content-Type"
+msgstr "Content-Type"
+
+#: models.py:43 models.py:87
+msgid "Protocol"
+msgstr "Protocolo"
+
+#: models.py:51 models.py:95
 msgid "Hostname"
 msgstr "Nome do host"
 
-#: models.py:15
+#: models.py:53 models.py:97
+msgid "Hostname or full url"
+msgstr "Hostname ou url completa"
+
+#: models.py:57 models.py:103
 msgid "Port TCP"
 msgstr "Porta TCP"
 
-#: models.py:17
+#: models.py:64 models.py:110
 msgid "Streaming sufix"
 msgstr "Sufixo da transmissão"
 
-#: models.py:21
+#: models.py:117
+msgid "Content"
+msgstr "Conteúdo"
+
+#: models.py:121
+msgid "Audio"
+msgstr "Audio"
+
+#: models.py:122
+msgid "Video"
+msgstr "Vídeo"
+
+#: models.py:127
 msgid "Streaming"
 msgstr "Transmissão"
 
-#: models.py:22
+#: models.py:128
 msgid "Streamings"
 msgstr "Transmissões"

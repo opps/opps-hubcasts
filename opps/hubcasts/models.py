@@ -32,6 +32,13 @@ class Streaming(Publishable):
         default='o'
     )
 
+    content_type = models.CharField(
+        _(u'Content-Type'),
+        max_length=50,
+        blank=True,
+        help_text='audio/mp3, audio/aac...'
+    )
+
     protocol = models.CharField(
         _(u'Protocol'),
         max_length=5,
@@ -67,6 +74,13 @@ class Streaming(Publishable):
         default='o',
         null=True,
         blank=True
+    )
+
+    mobile_content_type = models.CharField(
+        _(u'Content-Type'),
+        max_length=50,
+        blank=True,
+        help_text='audio/mp3, audio/aac...'
     )
 
     mobile_protocol = models.CharField(

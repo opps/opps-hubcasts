@@ -23,10 +23,10 @@ class StreamingAdmin(PublishableAdmin, AdminViewPermission):
             'fields': ('site', 'name', 'content')}),
         (_(u'Desktop'), {
             'fields': ('type', 'protocol', 'host',
-                       'port', 'sufix')}),
+                       'port', 'sufix', 'content_type',)}),
         (_(u'Mobile'), {
             'fields': ('mobile_type', 'mobile_protocol', 'mobile_host',
-                       'mobile_port', 'mobile_sufix',)}),
+                       'mobile_port', 'mobile_sufix','mobile_content_type',)}),
         (_(u'Publication'), {
             'classes': ('extrapretty'),
             'fields': ('published', 'date_available')}),
