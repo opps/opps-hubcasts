@@ -33,7 +33,7 @@ class Streaming(Publishable):
     )
 
     content_type = models.CharField(
-        _(u'Content Type'),
+        _(u'Content-Type'),
         max_length=50,
         blank=True,
         help_text='audio/mp3, audio/aac...'
@@ -77,7 +77,7 @@ class Streaming(Publishable):
     )
 
     mobile_content_type = models.CharField(
-        _(u'Content Type'),
+        _(u'Content-Type'),
         max_length=50,
         blank=True,
         help_text='audio/mp3, audio/aac...'
